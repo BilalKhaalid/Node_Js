@@ -4,4 +4,9 @@ const add = (a, b) => {
 };
 
 // ? This is the common module export
-module.exports = add;
+// module.exports = add;
+
+// ? Second Pattern
+module.exports = (a, b) => {
+  return a + b;
+};
