@@ -5,3 +5,6 @@ const add = require("./module");
 
 const sum = add(15, 15);
 console.log(sum);
+
+require("./batman");
+require("./superman");
