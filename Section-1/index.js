@@ -48,6 +48,11 @@ const math = require("./math");
 // console.log(math.subtract(15, 5));
 
 // ! We can destructure this math object
+// const { add, subtract } = math;
+// console.log(add(5, 5));
+// console.log(subtract(15, 5));
+
+// ! Fourth Pattern
 const { add, subtract } = math;
 console.log(add(5, 5));
 console.log(subtract(15, 5));
