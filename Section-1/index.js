@@ -37,5 +37,17 @@
 
 // ! Importing the exported module
 // ? This is the standard import
-const add = require("./math");
+// const add = require("./math");
+// console.log(add(5, 5));
+
+// ? This is the multiple module import we have to assign it in variable/constant which will receive an object
+const math = require("./math");
+// ! This will log math as an object
+// console.log(math);
+// console.log(math.add(5, 5));
+// console.log(math.subtract(15, 5));
+
+// ! We can destructure this math object
+const { add, subtract } = math;
 console.log(add(5, 5));
+console.log(subtract(15, 5));
