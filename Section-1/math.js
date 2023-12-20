@@ -22,10 +22,20 @@
 // };
 
 // ? Fourth Pattern
-module.exports.add = (a, b) => {
+// module.exports.add = (a, b) => {
+//   return a + b;
+// };
+
+// module.exports.subtract = (a, b) => {
+//   return a - b;
+// };
+
+// ? Fifth Pattern
+// * This method is not recommended
+exports.add = (a, b) => {
   return a + b;
 };
 
-module.exports.subtract = (a, b) => {
+exports.subtract = (a, b) => {
   return a - b;
 };
