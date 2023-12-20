@@ -13,4 +13,7 @@ class SuperHero {
 }
 
 // ! Exporting an instance of the class
-module.exports = new SuperHero("Bilal");
+// module.exports = new SuperHero("Bilal");
+
+// ! Exporting the class itself so the node will not cache it in memory
+module.exports = SuperHero;
