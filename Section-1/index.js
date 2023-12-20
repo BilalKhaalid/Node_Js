@@ -21,16 +21,16 @@
 // console.log(SuperHero2.getName());
 
 // ! memory caching concept importing the class SuperHero itself
-const SuperHero = require("./super-hero");
-console.log(SuperHero);
+// const SuperHero = require("./super-hero");
+// console.log(SuperHero);
 
-const Bilal = new SuperHero("Bilal");
-console.log(Bilal);
+// const Bilal = new SuperHero("Bilal");
+// console.log(Bilal);
 
-const Bilal_Khalid = Bilal.setName("Bilal Khalid");
-console.log(Bilal_Khalid);
+// const Bilal_Khalid = Bilal.setName("Bilal Khalid");
+// console.log(Bilal_Khalid);
 
-const newSuperHero = require("./super-hero");
-const SuperHero2 = new newSuperHero("John");
+// const newSuperHero = require("./super-hero");
+// const SuperHero2 = new newSuperHero("John");
 
-console.log(SuperHero2.getName());
+// console.log(SuperHero2.getName());
