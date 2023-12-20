@@ -34,3 +34,8 @@
 // const SuperHero2 = new newSuperHero("John");
 
 // console.log(SuperHero2.getName());
+
+// ! Importing the exported module
+// ? This is the standard import
+const add = require("./math");
+console.log(add(5, 5));
