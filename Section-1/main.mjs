@@ -5,11 +5,15 @@
 
 // ! When we want to import more than one modules there are couple of ways
 // ? This will import everything as math object from the desired module
-import * as math from "./ESModules.mjs";
+// import * as math from "./ESModules.mjs";
 
-// ! Then we can destructure it or use it directly
-// ? Directly
-console.log(math.default.multiply(4, 4));
-// ? Destructuring
-const { add, subtract, multiply } = math.default;
-console.log(subtract(15, 5));
+// // ! Then we can destructure it or use it directly
+// // ? Directly
+// console.log(math.default.multiply(4, 4));
+// // ? Destructuring
+// const { add, subtract, multiply } = math.default;
+// console.log(subtract(15, 5));
+
+// ! Importing a named export
+import { multiply } from "./ESModules.mjs";
+console.log(multiply(15, 2));
