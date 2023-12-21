@@ -1,10 +1,14 @@
 // ! Extending from EventEmitters
-class PizzaShop {
-  constructor(params) {
+const EventEmitters = require("node:events");
+
+class PizzaShop extends EventEmitters {
+  constructor() {
+    super();
     this.orderNumbers = 0;
   }
-  order() {
-    console.log(`Order Received! Baking the pizza `);
+  order(size, topping) {
+    this.orderNumbers++;
+    this.emit("order", size, topping);
   }
   displayOrderNumber() {
     console.log(`Received Orders Number: ${this.orderNumbers}`);
