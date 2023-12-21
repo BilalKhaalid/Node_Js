@@ -5,5 +5,20 @@ const add = (a, b) => {
   return a + b;
 };
 
+const subtract = (a, b) => {
+  return a - b;
+};
+
+function multiply(a, b) {
+  return a * b;
+}
+
 // ! First Pattern export default
-export default add;
+// export default add;
+
+// ! When we want to export more than one module we use second pattern
+export default {
+  add,
+  subtract,
+  multiply,
+};
