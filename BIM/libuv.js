@@ -20,7 +20,11 @@ const start = Date.now();
 // console.log(`Hash: ${Date.now() - start}`);
 
 // ! when node receives a async task it transfer it to  libuv so the code does not block the execution of other code. libuv uses a thread from its thread pool so the async tasks run concurrently without waiting for on another to complete the execution
-const max_count = 1;
+
+//! libuv has 4 threads by default the number of threads can be increased by process.env.UV_THREADPOOL_SIZE but the increased number depends upon your cpu cores
+process.env.UV_THREADPOOL_SIZE = 6; // ? this snippet is used to increase the thread size of libuv
+const max_count = 4;
+
 for (let i = 0; i < max_count; i++) {
   crypto.pbkdf2("password", "salt", 100000, 512, "sha512", () => {
     console.log(`Hash ${i + 1} ${Date.now() - start}`);
