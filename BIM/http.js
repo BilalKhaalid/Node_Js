@@ -15,8 +15,10 @@ const server = http.createServer((req, res) => {
 
   // ! Sending HTML as response
   res.writeHead(200, { "Content-Type": "text/html" });
-  const html = fs.readFileSync(__dirname + "/index.html", "utf-8");
-  res.end(html);
+  //   const html = fs.readFileSync(__dirname + "/index.html", "utf-8");
+  //   res.end(html);
+  // ! Or we can use pipe to do the job
+  fs.createReadStream("./index.html").pipe(res);
 });
 const port = 5000;
 server.listen(port, () => {
