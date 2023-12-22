@@ -18,7 +18,13 @@ const server = http.createServer((req, res) => {
   //   const html = fs.readFileSync(__dirname + "/index.html", "utf-8");
   //   res.end(html);
   // ! Or we can use pipe to do the job
-  fs.createReadStream("./index.html").pipe(res);
+  //   fs.createReadStream("./index.html").pipe(res);
+
+  // ! changing html template in response
+  let name = "Bilal";
+  let html = fs.readFileSync(__dirname + "/index.html", "utf-8");
+  html = html.replace("{{name}}", name);
+  res.end(html);
 });
 const port = 5000;
 server.listen(port, () => {
